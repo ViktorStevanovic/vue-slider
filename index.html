@@ -30,7 +30,7 @@
                     <div class="prev" @click="prevSlide()"></div>
                     <div class="next" @click="nextSlide()"></div>
                     <div v-for="(imageUrl, index) in slides" class="thumb" :class="(index === activeIndex) ? 'active' : ''">
-                        <img :src="slides[index].image" alt="{{slides[activeIndex].title}} image">
+                        <img :src="slides[index].image" alt="{{slides[activeIndex].title}} image" @click="changeSlideTo(index)">
                     </div>
                     <!-- <div class="thumb" :class="">
                         <img src="img/01.webp" alt="Svezia" />

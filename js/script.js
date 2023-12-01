@@ -32,6 +32,9 @@ createApp({
         }
     }, 
     methods: {
+        changeSlideTo(index){
+            this.activeIndex = index;
+        },
         nextSlide(){
             this.activeIndex = this.activeIndex + 1;
             if(this.activeIndex >= this.slides.length){
