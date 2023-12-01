@@ -5,6 +5,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            timer: setInterval(this.nextSlide,1000),
             activeIndex:0,
             slides: [
                 {
@@ -47,5 +48,14 @@ createApp({
                 this.activeIndex = 4;
             };
         },
+        autoPlay(){
+            this.timer = setInterval(this.nextSlide,1000)
+
+        },
+        inverter(){
+            clearInterval(this.timer)       
+        }        
     },
+
 }).mount('#app');
+
